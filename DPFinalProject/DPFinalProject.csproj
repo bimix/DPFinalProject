@@ -43,11 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DecoratorPattern\Component\ICharacter.cs" />
+    <Compile Include="DecoratorPattern\ConcreteComponent\BasicCharacter.cs" />
+    <Compile Include="DecoratorPattern\ConcreteDecorator\InjuredCharacter.cs" />
+    <Compile Include="DecoratorPattern\ConcreteDecorator\SickCharacter.cs" />
+    <Compile Include="DecoratorPattern\ConcreteDecorator\WetCharacter.cs" />
+    <Compile Include="DecoratorPattern\Decorator\BuffedCharacter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
