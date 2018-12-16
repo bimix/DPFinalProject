@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.StrategyPattern.Interface
 {
-    interface SurvivalStrategy
+    public interface SurvivalStrategy
     {
-       
+        void Strategy<T>(List<T> availableStrategies);
     }
 }
