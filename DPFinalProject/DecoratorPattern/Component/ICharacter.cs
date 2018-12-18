@@ -8,7 +8,11 @@ namespace DPFinalProject.DecoratorPattern.Component
 {
     public interface ICharacter
     {
-        string Moral { get; }
+        bool getUpdateStatus();
+        bool getRadarStatus();
+        string getDescription();
+        void update();
+        int getMoral();
         
     }
 }

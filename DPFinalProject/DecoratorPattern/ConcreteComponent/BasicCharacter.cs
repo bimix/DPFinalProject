@@ -10,11 +10,35 @@ namespace DPFinalProject.DecoratorPattern.ConcreteComponent
 
     public sealed class BasicCharacter : ICharacter
     {
-        public string Moral
+        private int moral = 100;
+        private string description = "You are basic";
+        private bool radar = false;
+        private bool updateStatus = false;
+
+        public string getDescription()
         {
-            get { return "I am sick"; }
+            return description;
         }
-       
+
+        public int getMoral()
+        {
+            return moral;
+        }
+
+        public bool getRadarStatus()
+        {
+            return radar;
+        }
+
+        public bool getUpdateStatus()
+        {
+            return updateStatus;
+        }
+
+        public void update()
+        {
+            updateStatus = true;
+        }
     }
 
 }

@@ -8,22 +8,22 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
 {
-    public class WetCharacter : BuffedCharacter
+    public class ColdCharacter : BuffedCharacter
     {
         private ICharacter character;
-        public WetCharacter(ICharacter character)
+        public ColdCharacter(ICharacter character)
         {
             this.character = character;
         }
 
         public string getDescription()
         {
-            return "You are now wet";
+            return "You are now cold";
         }
 
         public int getMoral()
         {
-            return character.getMoral() - 5;
+            return character.getMoral() - 10;
         }
 
         public bool getRadarStatus()
@@ -40,5 +40,6 @@ namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
         {
             character.update();
         }
+
     }
 }

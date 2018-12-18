@@ -9,9 +9,9 @@ namespace DPFinalProject.StrategyPattern.ConcreteStrategies
 {
     public class DressingStrategy : SurvivalStrategy
     {
-        public void Strategy<T>(List<T> availableStrategies)
+        public void useStrategy()
         {
-            //Logic of strategy
+            Console.WriteLine("You make clothes from the resources found and the event passes without affecting you.");
         }
     }
 }

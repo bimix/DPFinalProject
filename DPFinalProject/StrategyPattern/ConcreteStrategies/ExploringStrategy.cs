@@ -9,9 +9,9 @@ namespace DPFinalProject.StrategyPattern.ConcreteStrategies
 {
     class ExploringStrategy : SurvivalStrategy
     {
-        public void Strategy<T>(List<T> availableStrategies)
+        public void useStrategy()
         {
-            //Logic of strategy
+            Console.WriteLine("You go and find a new place to stay while the event is happening so it doesn't affect you.");
         }
     }
 }

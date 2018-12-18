@@ -8,22 +8,23 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
 {
-    public class WetCharacter : BuffedCharacter
+    public class HappyCharacter : BuffedCharacter
     {
         private ICharacter character;
-        public WetCharacter(ICharacter character)
+
+        public HappyCharacter(ICharacter character)
         {
             this.character = character;
         }
 
         public string getDescription()
         {
-            return "You are now wet";
+            return "You are now happy";
         }
 
         public int getMoral()
         {
-            return character.getMoral() - 5;
+            return character.getMoral() + 5;
         }
 
         public bool getRadarStatus()

@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.DecoratorPattern.Decorator
 {
-    public abstract class BuffedCharacter : ICharacter
+    public interface BuffedCharacter : ICharacter
     {
-
-        private ICharacter character;
-        public BuffedCharacter(ICharacter Character)
-        {
-            character = Character;
-        }
-        public string Moral { get { return character.Moral; } }
+        bool getUpdateStatus();
+        bool getRadarStatus();
+        string getDescription();
+        void update();
+        int getMoral();
     }
 
 }
