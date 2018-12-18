@@ -2,6 +2,11 @@
 using DPFinalProject.DecoratorPattern.ConcreteComponent;
 using DPFinalProject.DecoratorPattern.ConcreteDecorator;
 using DPFinalProject.DecoratorPattern.Decorator;
+using DPFinalProject.FactoryMethodPattern.Factory;
+using DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories;
+using DPFinalProject.FactoryMethodPattern.Product;
+using DPFinalProject.StrategyPattern.ConcreteStrategies;
+using DPFinalProject.StrategyPattern.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,14 +20,54 @@ namespace DPFinalProject
         static void Main(string[] args)
         {
             ICharacter character = new BasicCharacter();
-<<<<<<< HEAD
-            BuffedCharacter decorator = new DecoratorPattern.ConcreteDecorator.ColdCharacter(character);
-=======
-            BuffedCharacter decorator = new DecoratorPattern.ConcreteDecorator.HappyCharacter(character);
->>>>>>> 3416651c95f4981d46d42b867ac1e40843168c87
-            Console.WriteLine(string.Format("Moral :{0}", decorator.Moral));
+            int difficulty = Console.Read();
+            int level = Console.Read();
+            MakeEventDifficulty eventMaker;
+            switch (difficulty)
+            {
+                case 1:
+                    eventMaker = new MakeEventHard(level);
+                    break;
+                case 2:
+                    eventMaker = new MakeEventNormal(level);
+                    break;
+                default:
+                    eventMaker = new MakeEventEasy(level);
+                    break;
+            }
 
-            Console.ReadLine();
+            eventMaker.add(character);
+
+            Event someEvent = eventMaker.getEvent();
+
+            if (character.getUpdateStatus())
+            {
+                SurvivalStrategy strategy;
+                int strategyChoice = Console.Read();
+                switch (strategyChoice)
+                {
+                    case 1:
+                        strategy = new BuildingStrategy();
+                        break;
+                    case 2:
+                        strategy = new DressingStrategy();
+                        break;
+                    case 3:
+                        strategy = new ExploringStrategy();
+                        break;
+                    default:
+                        strategy = new NothingStrategy();
+                        break;
+                }
+                strategy.useStrategy();
+                //if (strategy is nothing execute what is in else)
+            }
+            else
+            {
+                character = someEvent.getBuffedCharacter(character);
+                Console.WriteLine(character.getDescription());
+                Console.WriteLine("New moral is " + character.getMoral());
+            }
         }
     }
 }
