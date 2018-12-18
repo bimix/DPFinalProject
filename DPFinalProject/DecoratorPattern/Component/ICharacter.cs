@@ -13,6 +13,5 @@ namespace DPFinalProject.DecoratorPattern.Component
         string getDescription();
         void update();
         int getMoral();
-        
     }
 }
