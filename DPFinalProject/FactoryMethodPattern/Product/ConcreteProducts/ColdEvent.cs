@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using DPFinalProject.DecoratorPattern.Component;
 using DPFinalProject.DecoratorPattern.ConcreteDecorator;
+using DPFinalProject.DecoratorPattern.Decorator;
 
 namespace DPFinalProject.FactoryMethodPattern.Product.ConcreteProducts
 {
     class ColdEvent : BadEvent
     {
-        public ICharacter getBuffedCharacter(ICharacter c)
+        public BuffedCharacter getBuffedCharacter(ICharacter c)
         {
             return new ColdCharacter(c);
         }

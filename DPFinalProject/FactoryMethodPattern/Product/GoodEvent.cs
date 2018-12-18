@@ -1,4 +1,5 @@
 ﻿using DPFinalProject.DecoratorPattern.Component;
+using DPFinalProject.DecoratorPattern.Decorator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace DPFinalProject.FactoryMethodPattern.Product
 {
     interface GoodEvent: Event
     {
-        ICharacter getBuffedCharacter(ICharacter c);
+        BuffedCharacter getBuffedCharacter(ICharacter c);
     }
 }

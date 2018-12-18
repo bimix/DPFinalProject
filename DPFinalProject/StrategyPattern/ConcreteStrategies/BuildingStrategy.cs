@@ -9,9 +9,9 @@ namespace DPFinalProject.StrategyPattern.ConcreteStrategies
 {
     public class BuildingStrategy : SurvivalStrategy
     {
-        public void useStrategy()
+        public string useStrategy()
         {
-            Console.WriteLine("You build a shelter and the event passes without affecting you.");
+            return "You build a shelter and the event passes without affecting you.";
         }
     }
 }

@@ -9,9 +9,9 @@ namespace DPFinalProject.StrategyPattern.ConcreteStrategies
 {
     class NothingStrategy : SurvivalStrategy
     {
-        public void useStrategy()
+        public string useStrategy()
         {
-            Console.WriteLine("You do nothing");
+            return "You do nothing";
         }
     }
 }

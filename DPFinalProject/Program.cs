@@ -59,8 +59,17 @@ namespace DPFinalProject
                         strategy = new NothingStrategy();
                         break;
                 }
-                strategy.useStrategy();
-                //if (strategy is nothing execute what is in else)
+
+                string strategyDescription = strategy.useStrategy();
+
+                Console.WriteLine(strategyDescription);
+
+                if (strategyDescription == "You do nothing")
+                {
+                    character = someEvent.getBuffedCharacter(character);
+                    Console.WriteLine(character.getDescription());
+                    Console.WriteLine("New moral is " + character.getMoral());
+                }
             }
             else
             {

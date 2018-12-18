@@ -8,6 +8,6 @@ namespace DPFinalProject.StrategyPattern.Interface
 {
     public interface SurvivalStrategy
     {
-        void useStrategy();
+        string useStrategy();
     }
 }

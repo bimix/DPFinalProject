@@ -64,6 +64,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StrategyPattern\ConcreteStrategies\BuildingStrategy.cs" />
+    <Compile Include="StrategyPattern\ConcreteStrategies\NothingStrategy.cs" />
     <Compile Include="StrategyPattern\ConcreteStrategies\DressingStrategy.cs" />
     <Compile Include="StrategyPattern\Interface\SurvivalStrategy.cs" />
     <Compile Include="StrategyPattern\ConcreteStrategies\ExploringStrategy.cs" />
