@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DPFinalProject.StrategyPattern.Interface
+namespace DPFinalProject.ObserverPattern
 {
-    public interface SurvivalStrategy
+    public class GoodEvent
     {
-        void Strategy();
     }
 }

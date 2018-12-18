@@ -11,11 +11,21 @@ namespace DPFinalProject.DecoratorPattern.Decorator
     {
 
         private ICharacter character;
-        public BuffedCharacter(ICharacter Character)
+
+       
+
+        public int Moral => throw new NotImplementedException();
+
+        public bool UpdateStatus => throw new NotImplementedException();
+
+        public bool RadarStatus => throw new NotImplementedException();
+
+        public string Description => throw new NotImplementedException();
+
+        public void Update()
         {
-            character = Character;
+            throw new NotImplementedException();
         }
-        public string Moral { get { return character.Moral; } }
     }
 
 }

@@ -15,7 +15,7 @@ namespace DPFinalProject
         static void Main(string[] args)
         {
             ICharacter character = new BasicCharacter();
-            BuffedCharacter decorator = new DecoratorPattern.ConcreteDecorator.SickCharacter(character);
+            BuffedCharacter decorator = new DecoratorPattern.ConcreteDecorator.HappyCharacter(character);
             Console.WriteLine(string.Format("Moral :{0}", decorator.Moral));
 
             Console.ReadLine();

@@ -9,9 +9,9 @@ namespace DPFinalProject.StrategyPattern.ConcreteStrategies
 {
     public class BuildingStrategy : SurvivalStrategy
     {
-        public void Strategy<T>(List<T> availableStrategies)
+        public void Strategy()
         {
-            //Logic of strategy
+            throw new NotImplementedException();
         }
     }
 }

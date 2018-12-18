@@ -6,15 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
+namespace DPFinalProject.ObserverPattern
 {
-    public class InjuredCharacter : BuffedCharacter
+    public interface Event
     {
-
-        public InjuredCharacter(ICharacter character) : base(character)
+        public ICharacter BuffedCharacter(Character c)
         {
+            throw new NotImplementedException();
         }
-
-
     }
 }

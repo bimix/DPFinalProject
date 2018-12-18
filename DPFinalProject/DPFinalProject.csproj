@@ -45,10 +45,13 @@
   <ItemGroup>
     <Compile Include="DecoratorPattern\Component\ICharacter.cs" />
     <Compile Include="DecoratorPattern\ConcreteComponent\BasicCharacter.cs" />
-    <Compile Include="DecoratorPattern\ConcreteDecorator\InjuredCharacter.cs" />
-    <Compile Include="DecoratorPattern\ConcreteDecorator\SickCharacter.cs" />
+    <Compile Include="DecoratorPattern\ConcreteDecorator\ColdCharacter.cs" />
+    <Compile Include="DecoratorPattern\ConcreteDecorator\HappyCharacter.cs" />
     <Compile Include="DecoratorPattern\ConcreteDecorator\WetCharacter.cs" />
     <Compile Include="DecoratorPattern\Decorator\BuffedCharacter.cs" />
+    <Compile Include="ObserverPattern\BadEvent.cs" />
+    <Compile Include="ObserverPattern\Event.cs" />
+    <Compile Include="ObserverPattern\GoodEvent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StrategyPattern\ConcreteStrategies\BuildingStrategy.cs" />

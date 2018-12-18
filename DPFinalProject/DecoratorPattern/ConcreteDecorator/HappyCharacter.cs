@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
 {
-    public class WetCharacter : BuffedCharacter
+    public class HappyCharacter : BuffedCharacter
     {
         public ICharacter character;
 
@@ -21,12 +21,10 @@ namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
         {
             throw new NotImplementedException();
         }
-
         public new string Description()
         {
             throw new NotImplementedException();
         }
-
         public new void Update()
         {
             throw new NotImplementedException();
