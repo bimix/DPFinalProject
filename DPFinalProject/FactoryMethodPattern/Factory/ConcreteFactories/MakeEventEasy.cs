@@ -14,7 +14,7 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
         private int goodEventsCount;
         private int badEventsCount;
         private int level;
-        private List<ICharacter> observersList;
+        private List<ICharacter> observersList = new List<ICharacter>();
 
         public MakeEventEasy(int level)
         {

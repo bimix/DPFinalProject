@@ -20,8 +20,8 @@ namespace DPFinalProject
         static void Main(string[] args)
         {
             ICharacter character = new BasicCharacter();
-            int difficulty = Console.Read();
-            int level = Console.Read();
+            int difficulty = 1;
+            int level = 1;
             MakeEventDifficulty eventMaker;
             switch (difficulty)
             {
