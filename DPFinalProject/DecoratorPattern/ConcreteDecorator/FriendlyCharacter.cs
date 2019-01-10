@@ -10,9 +10,9 @@ namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
 {
     class FriendlyCharacter : BuffedCharacter
     {
-        private ICharacter character;
+        private Character character;
 
-        public FriendlyCharacter(ICharacter character)
+        public FriendlyCharacter(Character character)
         {
             this.character = character;
         }

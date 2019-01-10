@@ -14,14 +14,14 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
         private int goodEventsCount;
         private int badEventsCount;
         private int level;
-        private List<ICharacter> observersList = new List<ICharacter>();
+        private List<Character> observersList = new List<Character>();
 
         public MakeEventNormal(int level)
         {
             this.level = level;
         }
 
-        public void add(ICharacter c)
+        public void add(Character c)
         {
             observersList.Add(c);
         }
@@ -34,7 +34,7 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
 
         public void notify()
         {
-            foreach (ICharacter character in observersList)
+            foreach (Character character in observersList)
             {
                 character.update();
             };

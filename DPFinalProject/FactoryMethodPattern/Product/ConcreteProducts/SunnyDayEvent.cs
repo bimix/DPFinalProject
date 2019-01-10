@@ -11,7 +11,7 @@ namespace DPFinalProject.FactoryMethodPattern.Product.ConcreteProducts
 {
     class SunnyDayEvent : GoodEvent
     {
-        public BuffedCharacter getBuffedCharacter(ICharacter c)
+        public BuffedCharacter getBuffedCharacter(Character c)
         {
             return new HappyCharacter(c);
         }

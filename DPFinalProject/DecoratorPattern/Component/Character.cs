@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.DecoratorPattern.Component
 {
-    public interface ICharacter
+    public interface Character
     {
         bool getUpdateStatus();
         bool getRadarStatus();

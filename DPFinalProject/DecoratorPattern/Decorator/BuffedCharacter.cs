@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.DecoratorPattern.Decorator
 {
-    public interface BuffedCharacter : ICharacter
+    public interface BuffedCharacter : Character
     {
         bool getUpdateStatus();
         bool getRadarStatus();

@@ -10,8 +10,8 @@ namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
 {
     public class ColdCharacter : BuffedCharacter
     {
-        private ICharacter character;
-        public ColdCharacter(ICharacter character)
+        private Character character;
+        public ColdCharacter(Character character)
         {
             this.character = character;
         }

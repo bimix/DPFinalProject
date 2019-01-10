@@ -19,7 +19,7 @@ namespace DPFinalProject
     {
         static void Main(string[] args)
         {
-            ICharacter character = new BasicCharacter();
+            Character character = new BasicCharacter();
             int difficulty = 1;
             int level = 1;
             MakeEventDifficulty eventMaker;

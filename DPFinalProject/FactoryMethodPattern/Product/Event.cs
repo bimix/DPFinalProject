@@ -10,6 +10,6 @@ namespace DPFinalProject.FactoryMethodPattern.Product
 {
     public interface Event
     {
-        BuffedCharacter getBuffedCharacter(ICharacter c);
+        BuffedCharacter getBuffedCharacter(Character c);
     }
 }

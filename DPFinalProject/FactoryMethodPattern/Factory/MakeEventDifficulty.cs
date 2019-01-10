@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.FactoryMethodPattern.Factory
 {
-    interface MakeEventDifficulty
+    public interface MakeEventDifficulty
     {
         Event getEvent();
-        void add(ICharacter c);
+        void add(Character c);
         void notify();
     }
 }

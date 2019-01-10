@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DPFinalProject.DecoratorPattern.ConcreteComponent
 {
 
-    public sealed class BasicCharacter : ICharacter
+    public sealed class BasicCharacter : Character
     {
         private int moral = 100;
         private string description = "You are basic";

@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.FactoryMethodPattern.Product
 {
-    interface BadEvent: Event
+    public interface BadEvent: Event
     {
-        BuffedCharacter getBuffedCharacter(ICharacter c);
+        BuffedCharacter getBuffedCharacter(Character c);
     }
 }
