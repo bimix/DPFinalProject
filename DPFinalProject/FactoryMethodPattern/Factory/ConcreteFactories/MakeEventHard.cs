@@ -28,6 +28,10 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
 
         public Event getEvent()
         {
+            if (observersList[0].getRadarStatus())
+            {
+                notify();
+            }
             // complex logic for returning new event depending on the number of bad and good events it returned
             return new ColdEvent();
         }

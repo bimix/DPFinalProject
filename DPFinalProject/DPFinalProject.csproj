@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DecoratorPattern\Component\ICharacter.cs" />
+    <Compile Include="DecoratorPattern\Component\Character.cs" />
     <Compile Include="DecoratorPattern\ConcreteComponent\BasicCharacter.cs" />
     <Compile Include="DecoratorPattern\ConcreteDecorator\ColdCharacter.cs" />
     <Compile Include="DecoratorPattern\ConcreteDecorator\FriendlyCharacter.cs" />

@@ -35,24 +35,30 @@ namespace DPFinalProject
                     eventMaker = new MakeEventEasy(level);
                     break;
             }
-
+            // Test
+            //Event test = new FactoryMethodPattern.Product.ConcreteProducts.FindPetEvent();
+            //character = test.getBuffedCharacter(character);
+            // End
             eventMaker.add(character);
-
             Event someEvent = eventMaker.getEvent();
-
             if (character.getUpdateStatus())
             {
+                Console.WriteLine("Choose a startegy:");
+                Console.WriteLine("1.Build a shelter.");
+                Console.WriteLine("2.Make some clothes to wear.");
+                Console.WriteLine("3.Go find a new are to live in.");
+                Console.WriteLine("Do nothing (type anything exept 1, 2 or 3)");
                 SurvivalStrategy strategy;
                 int strategyChoice = Console.Read();
                 switch (strategyChoice)
                 {
-                    case 1:
+                    case 49:
                         strategy = new BuildingStrategy();
                         break;
-                    case 2:
+                    case 50:
                         strategy = new DressingStrategy();
                         break;
-                    case 3:
+                    case 51:
                         strategy = new ExploringStrategy();
                         break;
                     default:
@@ -70,6 +76,10 @@ namespace DPFinalProject
                     Console.WriteLine(character.getDescription());
                     Console.WriteLine("New moral is " + character.getMoral());
                 }
+                else
+                {
+                    Console.WriteLine("New moral is " + character.getMoral());
+                }
             }
             else
             {
@@ -77,6 +87,7 @@ namespace DPFinalProject
                 Console.WriteLine(character.getDescription());
                 Console.WriteLine("New moral is " + character.getMoral());
             }
+            Console.ReadKey();
         }
     }
 }
