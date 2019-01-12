@@ -33,8 +33,34 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
                 notify();
             }
             // complex logic for returning new event depending on the number of bad and good events it returned
-            return new ColdEvent();
+
+            // return new ColdEvent();
+            Random rnd = new Random();
+
+            int ev = rnd.Next(1, 4);
+
+            Event returnedEvent = new ColdEvent();
+
+            switch (ev)
+            {
+                case 1:
+                    returnedEvent = new ColdEvent();
+                    break;
+                case 2:
+                    returnedEvent = new StormEvent();
+                    break;
+                case 3:
+                    returnedEvent = new FindPetEvent();
+                    break;
+                case 4:
+                    returnedEvent = new SunnyDayEvent();
+                    break;
+            }
+
+            return returnedEvent;
         }
+
+        
 
         public void notify()
         {
