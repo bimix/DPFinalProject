@@ -29,7 +29,7 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
         public Event getEvent()
         {
             // complex logic for returning new event depending on the number of bad and good events it returned
-            return new ColdEvent();
+            return new FindPetEvent();
         }
 
         public void notify()

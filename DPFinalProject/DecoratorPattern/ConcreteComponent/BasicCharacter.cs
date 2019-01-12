@@ -37,7 +37,7 @@ namespace DPFinalProject.DecoratorPattern.ConcreteComponent
 
         public void update()
         {
-            updateStatus = true;
+            this.updateStatus = true;
         }
     }
 

@@ -38,9 +38,17 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
             Random rnd = new Random();
 
             int ev = rnd.Next(1, 4);
+            Console.WriteLine(ev);
 
             Event returnedEvent = new ColdEvent();
-
+            if ()//condition
+            {
+                //switch with good events
+            }
+            else
+            {
+                //switch with bad event
+            }
             switch (ev)
             {
                 case 1:

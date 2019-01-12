@@ -46,9 +46,11 @@ namespace DPFinalProject
             int endAt = Int32.Parse(level);
             for(int i = 0; i < endAt; i++)
             {
+                Console.ReadKey();
                 Event someEvent = eventMaker.getEvent();
-                if (character.getUpdateStatus())
+                if (character.getRadarStatus())
                 {
+                    someEvent.getBuffedCharacter(character);
                     Console.WriteLine("Choose a startegy:");
                     Console.WriteLine("1.Build a shelter.");
                     Console.WriteLine("2.Make some clothes to wear.");
