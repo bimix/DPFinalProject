@@ -13,6 +13,7 @@ namespace DPFinalProject.FactoryMethodPattern.Product.ConcreteProducts
     {
         public BuffedCharacter getBuffedCharacter(Character c)
         {
+            Console.WriteLine("The sun fills the sky and all the environment with joy.");
             return new HappyCharacter(c);
         }
     }

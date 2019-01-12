@@ -13,10 +13,10 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
     {
         private int goodEventsCount;
         private int badEventsCount;
-        private int level;
+        private string level;
         private List<Character> observersList = new List<Character>();
 
-        public MakeEventHard(int level)
+        public MakeEventHard(string level)
         {
             this.level = level;
         }

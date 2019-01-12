@@ -13,6 +13,7 @@ namespace DPFinalProject.FactoryMethodPattern.Product.ConcreteProducts
     {
         public BuffedCharacter getBuffedCharacter(Character c)
         {
+            Console.WriteLine("The winter has come.");
             return new ColdCharacter(c);
         }
     }

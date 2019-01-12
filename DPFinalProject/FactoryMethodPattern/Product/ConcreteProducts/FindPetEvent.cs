@@ -13,6 +13,7 @@ namespace DPFinalProject.FactoryMethodPattern.Product.ConcreteProducts
     {
         public BuffedCharacter getBuffedCharacter(Character c)
         {
+            Console.WriteLine("You found a new friend.");
             return new FriendlyCharacter(c);
         }
     }

@@ -20,15 +20,18 @@ namespace DPFinalProject
         static void Main(string[] args)
         {
             Character character = new BasicCharacter();
-            int difficulty = 1;
-            int level = 1;
+            Console.WriteLine("Choose a difficulty:");
+            Console.WriteLine("1.Hard; 2.Normal; 3.Easy");
+            string difficulty = Console.ReadLine();
+            Console.WriteLine("Choose a level:");
+            string level = Console.ReadLine();
             MakeEventDifficulty eventMaker;
             switch (difficulty)
             {
-                case 1:
+                case "1":
                     eventMaker = new MakeEventHard(level);
                     break;
-                case 2:
+                case "2":
                     eventMaker = new MakeEventNormal(level);
                     break;
                 default:
@@ -40,53 +43,58 @@ namespace DPFinalProject
             //character = test.getBuffedCharacter(character);
             // End
             eventMaker.add(character);
-            Event someEvent = eventMaker.getEvent();
-            if (character.getUpdateStatus())
+            int endAt = Int32.Parse(level);
+            for(int i = 0; i < endAt; i++)
             {
-                Console.WriteLine("Choose a startegy:");
-                Console.WriteLine("1.Build a shelter.");
-                Console.WriteLine("2.Make some clothes to wear.");
-                Console.WriteLine("3.Go find a new are to live in.");
-                Console.WriteLine("Do nothing (type anything exept 1, 2 or 3)");
-                SurvivalStrategy strategy;
-                int strategyChoice = Console.Read();
-                switch (strategyChoice)
+                Event someEvent = eventMaker.getEvent();
+                if (character.getUpdateStatus())
                 {
-                    case 49:
-                        strategy = new BuildingStrategy();
-                        break;
-                    case 50:
-                        strategy = new DressingStrategy();
-                        break;
-                    case 51:
-                        strategy = new ExploringStrategy();
-                        break;
-                    default:
-                        strategy = new NothingStrategy();
-                        break;
+                    Console.WriteLine("Choose a startegy:");
+                    Console.WriteLine("1.Build a shelter.");
+                    Console.WriteLine("2.Make some clothes to wear.");
+                    Console.WriteLine("3.Go find a new are to live in.");
+                    Console.WriteLine("Do nothing (type anything exept 1, 2 or 3)");
+                    SurvivalStrategy strategy;
+                    string strategyChoice = Console.ReadLine();
+                    switch (strategyChoice)
+                    {
+                        case "1":
+                            strategy = new BuildingStrategy();
+                            break;
+                        case "2":
+                            strategy = new DressingStrategy();
+                            break;
+                        case "3":
+                            strategy = new ExploringStrategy();
+                            break;
+                        default:
+                            strategy = new NothingStrategy();
+                            break;
+                    }
+
+                    string strategyDescription = strategy.useStrategy();
+
+                    Console.WriteLine(strategyDescription);
+
+                    if (strategyDescription == "You do nothing")
+                    {
+                        character = someEvent.getBuffedCharacter(character);
+                        Console.WriteLine(character.getDescription());
+                        Console.WriteLine("New moral is " + character.getMoral());
+                    }
+                    else
+                    {
+                        Console.WriteLine("New moral is " + character.getMoral());
+                    }
                 }
-
-                string strategyDescription = strategy.useStrategy();
-
-                Console.WriteLine(strategyDescription);
-
-                if (strategyDescription == "You do nothing")
+                else
                 {
                     character = someEvent.getBuffedCharacter(character);
                     Console.WriteLine(character.getDescription());
                     Console.WriteLine("New moral is " + character.getMoral());
                 }
-                else
-                {
-                    Console.WriteLine("New moral is " + character.getMoral());
-                }
             }
-            else
-            {
-                character = someEvent.getBuffedCharacter(character);
-                Console.WriteLine(character.getDescription());
-                Console.WriteLine("New moral is " + character.getMoral());
-            }
+            
             Console.ReadKey();
         }
     }
