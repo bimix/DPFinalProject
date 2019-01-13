@@ -29,7 +29,57 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
         public Event getEvent()
         {
             // complex logic for returning new event depending on the number of bad and good events it returned
-            return new ColdEvent();
+            //return new ColdEvent();
+
+            if (observersList[0].getRadarStatus())
+            {
+                notify();
+            }
+
+            Random rnd = new Random();
+
+            int ev = rnd.Next(1, 4);
+            Console.WriteLine(ev);
+
+            Event returnedEvent = null;
+
+            int div = Int32.Parse(level);
+
+
+            if (goodEventsCount < (div / 2))//condition
+            {
+                //switch with good events
+
+                switch (ev)
+                {
+
+                    case 1:
+                        returnedEvent = new FindPetEvent();
+                        break;
+                    case 2:
+                        returnedEvent = new SunnyDayEvent();
+                        break;
+                }
+
+                return returnedEvent;
+
+            }
+            else
+            {
+                //switch with bad event
+
+                switch (ev)
+                {
+                    case 3:
+                        returnedEvent = new ColdEvent();
+                        break;
+                    case 4:
+                        returnedEvent = new StormEvent();
+                        break;
+                }
+                return returnedEvent;
+
+            }
         }
 
         public void notify()

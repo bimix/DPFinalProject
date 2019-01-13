@@ -40,35 +40,49 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
             int ev = rnd.Next(1, 4);
             Console.WriteLine(ev);
 
-            Event returnedEvent = new ColdEvent();
-            if ()//condition
+            Event returnedEvent = null;
+
+            int div = Int32.Parse(level);
+
+
+            if (goodEventsCount < (div / 2))//condition
             {
                 //switch with good events
+
+                switch (ev)
+                {
+
+                    case 1:
+                        returnedEvent = new FindPetEvent();
+                        break;
+                    case 2:
+                        returnedEvent = new SunnyDayEvent();
+                        break;
+                }
+
+                return returnedEvent;
+
             }
             else
             {
                 //switch with bad event
-            }
-            switch (ev)
-            {
-                case 1:
-                    returnedEvent = new ColdEvent();
-                    break;
-                case 2:
-                    returnedEvent = new StormEvent();
-                    break;
-                case 3:
-                    returnedEvent = new FindPetEvent();
-                    break;
-                case 4:
-                    returnedEvent = new SunnyDayEvent();
-                    break;
+                switch (ev)
+                {
+                    case 3:
+                        returnedEvent = new ColdEvent();
+                        break;
+                    case 4:
+                        returnedEvent = new StormEvent();
+                        break;
+                }
+                return returnedEvent;
+
             }
 
-            return returnedEvent;
+
+
         }
 
-        
 
         public void notify()
         {

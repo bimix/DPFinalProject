@@ -96,6 +96,7 @@ namespace DPFinalProject
                     Console.WriteLine("New moral is " + character.getMoral());
                 }
             }
+            Console.WriteLine("G A M E  I S  O V E R !");
             
             Console.ReadKey();
         }
