@@ -38,10 +38,7 @@ namespace DPFinalProject
                     eventMaker = new MakeEventEasy(level);
                     break;
             }
-            // Test
-            //Event test = new FactoryMethodPattern.Product.ConcreteProducts.FindPetEvent();
-            //character = test.getBuffedCharacter(character);
-            // End
+            
             eventMaker.add(character);
             int endAt = Int32.Parse(level);
             for(int i = 0; i < endAt; i++)
@@ -54,7 +51,7 @@ namespace DPFinalProject
                     Console.WriteLine("Choose a startegy:");
                     Console.WriteLine("1.Build a shelter.");
                     Console.WriteLine("2.Make some clothes to wear.");
-                    Console.WriteLine("3.Go find a new are to live in.");
+                    Console.WriteLine("3.Go find a new area to live in.");
                     Console.WriteLine("Do nothing (type anything exept 1, 2 or 3)");
                     SurvivalStrategy strategy;
                     string strategyChoice = Console.ReadLine();

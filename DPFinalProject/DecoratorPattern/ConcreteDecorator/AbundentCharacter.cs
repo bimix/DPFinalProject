@@ -8,28 +8,27 @@ using System.Threading.Tasks;
 
 namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
 {
-    class FriendlyCharacter : BuffedCharacter
+    class AbundentCharacter : BuffedCharacter
     {
         private Character character;
-
-        public FriendlyCharacter(Character character)
+        public AbundentCharacter(Character character)
         {
             this.character = character;
         }
 
         public string getDescription()
         {
-            return "Now you have a companion to warn you about the weather.";
+            return "You have no worries for the next few days.";
         }
 
         public int getMoral()
         {
-            return character.getMoral() + 10;
+            return character.getMoral() + 15;
         }
 
         public bool getRadarStatus()
         {
-            return true;
+            return character.getRadarStatus();
         }
 
         public bool getUpdateStatus()
@@ -41,5 +40,6 @@ namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
         {
             character.update();
         }
+
     }
 }

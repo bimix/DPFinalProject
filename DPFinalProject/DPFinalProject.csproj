@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="DecoratorPattern\Component\Character.cs" />
     <Compile Include="DecoratorPattern\ConcreteComponent\BasicCharacter.cs" />
+    <Compile Include="DecoratorPattern\ConcreteDecorator\AbundentCharacter.cs" />
+    <Compile Include="DecoratorPattern\ConcreteDecorator\InjuredCharacter.cs" />
     <Compile Include="DecoratorPattern\ConcreteDecorator\ColdCharacter.cs" />
     <Compile Include="DecoratorPattern\ConcreteDecorator\FriendlyCharacter.cs" />
     <Compile Include="DecoratorPattern\ConcreteDecorator\HappyCharacter.cs" />
@@ -55,8 +57,10 @@
     <Compile Include="FactoryMethodPattern\Factory\ConcreteFactories\MakeEventNormal.cs" />
     <Compile Include="FactoryMethodPattern\Factory\MakeEventDifficulty.cs" />
     <Compile Include="FactoryMethodPattern\Product\BadEvent.cs" />
+    <Compile Include="FactoryMethodPattern\Product\ConcreteProducts\FallEvent.cs" />
     <Compile Include="FactoryMethodPattern\Product\ConcreteProducts\ColdEvent.cs" />
     <Compile Include="FactoryMethodPattern\Product\ConcreteProducts\FindPetEvent.cs" />
+    <Compile Include="FactoryMethodPattern\Product\ConcreteProducts\FindSupplyEvent.cs" />
     <Compile Include="FactoryMethodPattern\Product\ConcreteProducts\StormEvent.cs" />
     <Compile Include="FactoryMethodPattern\Product\ConcreteProducts\SunnyDayEvent.cs" />
     <Compile Include="FactoryMethodPattern\Product\Event.cs" />

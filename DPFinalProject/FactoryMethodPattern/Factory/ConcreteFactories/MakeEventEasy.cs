@@ -15,6 +15,7 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
         private int badEventsCount;
         private string level;
         private List<Character> observersList = new List<Character>();
+        Random rnd = new Random();
 
         public MakeEventEasy(string level)
         {
@@ -28,62 +29,92 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
 
         public Event getEvent()
         {
-            // complex logic for returning new event depending on the number of bad and good events it returned
-            //return new FindPetEvent();
-
             if (observersList[0].getRadarStatus())
             {
                 notify();
             }
 
-            Random rnd = new Random();
-
-            int ev = rnd.Next(1, 4);
-            Console.WriteLine(ev);
-
             Event returnedEvent = null;
 
             int div = Int32.Parse(level);
 
-
-            if (goodEventsCount < (div / 2))//condition
+            if (goodEventsCount == 0 && badEventsCount == 0)
             {
-                //switch with good events
-
+                int ev = rnd.Next(1, 6);
                 switch (ev)
                 {
-
                     case 1:
                         returnedEvent = new FindPetEvent();
                         break;
                     case 2:
                         returnedEvent = new SunnyDayEvent();
                         break;
-                }
-
-                return returnedEvent;
-
-            }
-            else
-            {
-                //switch with bad event
-
-                switch (ev)
-                {
                     case 3:
                         returnedEvent = new ColdEvent();
                         break;
                     case 4:
                         returnedEvent = new StormEvent();
                         break;
+                    case 5:
+                        returnedEvent = new FallEvent();
+                        break;
+                    case 6:
+                        returnedEvent = new FindSupplyEvent();
+                        break;
                 }
                 return returnedEvent;
-
             }
+            else
+            {
+                if (goodEventsCount < (div * 50 /100))
+                {
+                    int ev;
 
+                    if (observersList[0].getRadarStatus())
+                    {
+                        ev = rnd.Next(2, 3);
+                    }
+                    else
+                    {
+                        ev = rnd.Next(1, 3);
+                    }
 
-
+                    switch (ev)
+                    {
+                        case 1:
+                            returnedEvent = new FindPetEvent();
+                            break;
+                        case 2:
+                            returnedEvent = new SunnyDayEvent();
+                            break;
+                        case 3:
+                            returnedEvent = new FindSupplyEvent();
+                            break;
+                    }
+                    goodEventsCount++;
+                    return returnedEvent;
+                }
+                else
+                {
+                    int ev = rnd.Next(1, 3);
+                    switch (ev)
+                    {
+                        case 1:
+                            returnedEvent = new ColdEvent();
+                            break;
+                        case 2:
+                            returnedEvent = new StormEvent();
+                            break;
+                        case 3:
+                            returnedEvent = new FallEvent();
+                            break;
+                    }
+                    badEventsCount++;
+                    return returnedEvent;
+                }
+            }
         }
+
         public void notify()
         {
             foreach (Character character in observersList)

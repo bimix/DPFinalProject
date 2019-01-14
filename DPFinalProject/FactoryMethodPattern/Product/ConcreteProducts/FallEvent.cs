@@ -9,12 +9,12 @@ using DPFinalProject.DecoratorPattern.Decorator;
 
 namespace DPFinalProject.FactoryMethodPattern.Product.ConcreteProducts
 {
-    class FindPetEvent : GoodEvent
+    class FallEvent: BadEvent
     {
         public BuffedCharacter getBuffedCharacter(Character c)
         {
-            Console.WriteLine("Exploring through the jungle, you find a friendly monkey. It will be your pet from now.");
-            return new FriendlyCharacter(c);
+            Console.WriteLine("You fall from a big tree.");
+            return new InjuredCharacter(c);
         }
     }
 }

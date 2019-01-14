@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DPFinalProject.DecoratorPattern.Component;
-using DPFinalProject.DecoratorPattern.ConcreteDecorator;
 using DPFinalProject.DecoratorPattern.Decorator;
+using DPFinalProject.DecoratorPattern.ConcreteDecorator;
 
 namespace DPFinalProject.FactoryMethodPattern.Product.ConcreteProducts
 {
-    class FindPetEvent : GoodEvent
+    class FindSupplyEvent: GoodEvent
     {
         public BuffedCharacter getBuffedCharacter(Character c)
         {
-            Console.WriteLine("Exploring through the jungle, you find a friendly monkey. It will be your pet from now.");
-            return new FriendlyCharacter(c);
+            Console.WriteLine("Durring your walk, you stumble upon a crate with supplies.");
+            return new AbundentCharacter(c);
         }
     }
 }
