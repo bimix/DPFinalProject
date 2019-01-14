@@ -17,6 +17,11 @@ namespace DPFinalProject.FactoryMethodPattern.Factory.ConcreteFactories
         private List<Character> observersList = new List<Character>();
         Random rnd = new Random();
 
+        public void removeAll()
+        {
+            observersList.Clear();
+        }
+
         public MakeEventEasy(string level)
         {
             this.level = level;

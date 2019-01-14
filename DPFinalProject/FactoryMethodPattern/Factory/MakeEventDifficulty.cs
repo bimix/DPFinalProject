@@ -13,5 +13,6 @@ namespace DPFinalProject.FactoryMethodPattern.Factory
         Event getEvent();
         void add(Character c);
         void notify();
+        void removeAll();
     }
 }

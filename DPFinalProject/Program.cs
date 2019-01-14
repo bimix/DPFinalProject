@@ -78,6 +78,8 @@ namespace DPFinalProject
                     if (strategyDescription == "You do nothing")
                     {
                         character = someEvent.getBuffedCharacter(character);
+                        eventMaker.removeAll();
+                        eventMaker.add(character);
                         Console.WriteLine(character.getDescription());
                         Console.WriteLine("New moral is " + character.getMoral());
 
@@ -96,6 +98,8 @@ namespace DPFinalProject
                 else
                 {
                     character = someEvent.getBuffedCharacter(character);
+                    eventMaker.removeAll();
+                    eventMaker.add(character);
                     Console.WriteLine(character.getDescription());
                     Console.WriteLine("New moral is " + character.getMoral());
 
