@@ -45,7 +45,7 @@ namespace DPFinalProject
             {
                 Console.ReadKey();
                 Event someEvent = eventMaker.getEvent();
-                if (character.getRadarStatus())
+                if (character.getUpdateStatus())
                 {
                     someEvent.getBuffedCharacter(character);
                     Console.WriteLine("Choose a startegy:");
@@ -80,6 +80,13 @@ namespace DPFinalProject
                         character = someEvent.getBuffedCharacter(character);
                         Console.WriteLine(character.getDescription());
                         Console.WriteLine("New moral is " + character.getMoral());
+
+                        if (character.getMoral() <= 0)
+                        {
+                            Console.WriteLine("You got to the end of your desire to live. So you end it all.");
+                            Console.WriteLine("G A M E  I S  O V E R !");
+                            return;
+                        }
                     }
                     else
                     {
@@ -91,6 +98,13 @@ namespace DPFinalProject
                     character = someEvent.getBuffedCharacter(character);
                     Console.WriteLine(character.getDescription());
                     Console.WriteLine("New moral is " + character.getMoral());
+
+                    if(character.getMoral() <= 0)
+                    {
+                        Console.WriteLine("You got to the end of your desire to live. So you end it all.");
+                        Console.WriteLine("G A M E  I S  O V E R !");
+                        return;
+                    }
                 }
             }
             Console.WriteLine("G A M E  I S  O V E R !");
