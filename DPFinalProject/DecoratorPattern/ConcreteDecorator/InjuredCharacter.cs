@@ -19,7 +19,7 @@ namespace DPFinalProject.DecoratorPattern.ConcreteDecorator
 
         public string getDescription()
         {
-            return "You are baddly injured.";
+            return "You are badly injured.";
         }
 
         public int getMoral()
